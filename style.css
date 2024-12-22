@@ -1,4 +1,4 @@
-*{
+/*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -106,5 +106,93 @@ p{
         width: 30vw;
         font-size: 15px;
         border-radius: 5px;
+    }
+}*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 30px;
+    color: white;
+}
+
+.game {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 50px;
+    width: 90%; /* Ensures it adapts to smaller screens */
+    max-width: 300px; /* Restricts to a manageable size for larger screens */
+    justify-content: center;
+}
+
+.box {
+    color: rgb(234, 11, 11);
+    border: 2px solid black;
+    background-color: aliceblue;
+    height: 80px;
+    width: 80px;
+    border-radius: 20px;
+    font-size: 40px;
+    text-align: center;
+    box-shadow: 1px 1px 4px 0px rgb(65, 65, 65);
+}
+
+.reset {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+p {
+    margin-top: 20px;
+    color: red;
+}
+
+.hide {
+    display: none;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 480px) {
+    .box {
+        height: 60px;
+        width: 60px;
+        font-size: 30px;
+    }
+
+    .game {
+        gap: 5px;
+    }
+
+    .reset {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .heading {
+        font-size: 24px;
     }
 }
